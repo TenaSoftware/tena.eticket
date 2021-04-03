@@ -1,5 +1,5 @@
 """
-`ausers` utilties for tena project.
+`ausers` utilities for tena project.
 
 Generated Manually from Linux terminal
  * NAME: Wendirad Demelash
@@ -16,7 +16,6 @@ class TwilioVerifyer:
     AUTH_TOKEN = config('AUTH_TOKEN', cast=str)
     SERVICE_ID = config('SERVICE_ID', cast=str)
     INTERNATIONAL = r'\+2519\d{8}$' # E.16 format phone number
-    LOCAL = r'09\d{8}$' # Local phone number 
 
     def __init__(self):
         """ Initialize verifer using client """
@@ -28,7 +27,7 @@ class TwilioVerifyer:
             E.16 format number. """
         if re.match(self.INTERNATIONAL, number):
             return number
-        return f'+251{number.strip('0')}'
+        return f'+251{number.rstrip('0')}'
 
     def send_verification(self, number):
         """ Send 5 digit verification code to user when required."""
