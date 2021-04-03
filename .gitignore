@@ -1,3 +1,4 @@
 src/tena/.env
 **/__pycache__/
 **/.venv/
+.git-commit-template
