@@ -81,7 +81,16 @@ class Customer(User, Address):
         message='Please enter your phone number in +2519********'
                 ' or 09******** format.'
     )
-    phone_number = models.CharField(_('Phone number'), max_length=13, validators=[phone_regex])
+    phone_number = models.CharField(
+            _('Phone number'),
+            max_length=13,
+            validators=[phone_regex],
+            help_text=_('Use to verify and notify user.')
+        )
+    is_verified = models.BooleanField(
+            default=False,
+            help_text=_('Identify wether user is verified or not.')
+        )
 
     class Meta:
         verbose_name = _('custome')
