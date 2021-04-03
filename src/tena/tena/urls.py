@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, re_path
+from django.conf import settings
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^chaining/', include('smart_selects.urls')),
     re_path(r'^auth/', include('ausers.urls')),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [re_path(r'^__debug__/', include(debug_toolbar.urls))]
