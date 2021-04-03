@@ -13,6 +13,6 @@ from ausers.forms import SignUpForm
 from ausers.models import Customer
 
 class SignUpView(CreateView):
-    model = Custom
+    model = Customer
     form_class = SignUpForm
     template_name = 'ausers/signup_form.html'
