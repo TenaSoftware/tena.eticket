@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # Third party
 
     'smart_selects',
+    'django_extensions',
 
     # Local
 
