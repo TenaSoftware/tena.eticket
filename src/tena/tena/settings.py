@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     # Third party
 
     'smart_selects',
-    
+
     # Local
 
     'ausers.apps.AusersConfig',
@@ -155,4 +155,4 @@ AUTH_USER_MODEL = 'ausers.User'
 
 # Smart Select conf
 
-JQUERY_URL = True
+USE_DJANGO_JQUERY = True
