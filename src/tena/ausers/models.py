@@ -10,26 +10,27 @@ import json
 from django.db import models
 
 from django.contrib.auth.models import AbstractUser
-
+from django.core.validators import RegexValidator, MinLengthValidator
+from django.utils.translation import gettext_lazy as _
 from smart_selects.db_fields import ChainedForeginKey
 
 class User(AbstractUser):
     """ Custome User Model with to generalizer all users of platform. """
     SEX = (
-        ('M', ('Male')),
-        ('F', ('Female'))
+        ('M', _('Male')),
+        ('F', _('Female'))
     )
-    sex = models.CharField(max_length=2, choices=SEX)
+    sex = models.CharField(_('Sex'), max_length=2, choices=SEX)
 
 class Region(models.Model):
-    name = CharField(max_length=255)
+    name = CharField(_('Name'), max_length=255)
 
 class Zone(models.Model):
-    region = models.ForeginKey(Region, on_delete=models.CASCADE)
-    name = CharField(max_length=255)
+    region = models.ForeginKey(Region, verbose_name=_('Region'), on_delete=models.CASCADE)
+    name = CharField(_('Name'), max_length=255)
 
 class Woreda(models.Model):
-    zone = models.ForeginKey(Zone, on_delete=models.CASCADE)
+    zone = models.ForeginKey(Zone, verbose_name=_('Zone'), on_delete=models.CASCADE)
     name = CharField(max_length=255)
 
 class Address(models.Model):
@@ -39,23 +40,25 @@ class Address(models.Model):
             - Woreda
             - House Number
     """
-    region = models.ForeginKey(Region, on_delete=models.SET_NULL, null=True)
+    region = models.ForeginKey(Region, verbose_name=_('Region'), on_delete=models.SET_NULL, null=True)
     zone = ChainedForeginKey(
             Zone,
+            verbose_name=_('Zone'),
             chained_field='region',
             chained_models_field='region',
             show_all=False,
         )
     woreda = ChainedForeginKey(
             Woreda,
+            verbose_name=_('Woreda'),
             chained_field='woreda',
             chained_models_field='woreda',
             show_all=False,
         )
-    house_number = models.CharField(max_length=6)
+    house_number = models.CharField(_('House number'), max_length=6)
 
     class Meta:
         abstract = True
 
-class Customer(User):
+class Customer(User, Address):
     pass
