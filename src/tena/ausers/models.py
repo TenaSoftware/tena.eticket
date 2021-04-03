@@ -15,7 +15,7 @@ from smart_selects.db_fields import ChainedForeignKey
 
 
 class User(AbstractUser):
-    """ Custome User Model with to generalizer all users of platform. """
+    """ Custom User Model with to generalizer all users of platform. """
     SEX = (
         ('M', _('Male')),
         ('F', _('Female'))
