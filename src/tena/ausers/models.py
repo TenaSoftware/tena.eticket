@@ -16,11 +16,13 @@ from smart_selects.db_fields import ChainedForeginKey
 
 class User(AbstractUser):
     """ Custome User Model with to generalizer all users of platform. """
+    email = None
     SEX = (
         ('M', _('Male')),
         ('F', _('Female'))
     )
     sex = models.CharField(_('Sex'), max_length=2, choices=SEX)
+    REQUIRED_FIELDS = []
 
 class Region(models.Model):
     name = CharField(_('Name'), max_length=255)
@@ -61,4 +63,9 @@ class Address(models.Model):
         abstract = True
 
 class Customer(User, Address):
-    pass
+    phone_regex = RegexValidator(
+        r'(\+2519|09)\d{8}$',
+        message='Please enter your phone number in +2519********'
+                ' or 09******** format.'
+    )
+    phone_number = models.CharField(_('Phone number'), max_length=13, validators=[phone_regex])
