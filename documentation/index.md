@@ -135,7 +135,7 @@ providing easy to use, attainable quality products.
     </tr>
     <tr>
       <td>Project resource</td>
-      <td colspan=2> <a href="https://github.com/Wendirad/fse2021">FSE2021</a></td>
+      <td colspan=2> <a href="https://github.com/TenaSoftware/fse2021">FSE2021</a></td>
     </tr>
     <tr>
     <tr>
