@@ -11,9 +11,26 @@ from django.db import models
 
 from django.contrib.auth.models import AbstractUser
 
+from smart_selects.db_fields import ChainedForeginKey
+
 class User(AbstractUser):
     """ Custome User Model with to generalizer all users of platform. """
-    pass
+    SEX = (
+        ('M', ('Male')),
+        ('F', ('Female'))
+    )
+    sex = models.CharField(max_length=2, choices=SEX)
+
+class Region(models.Model):
+    name = CharField(max_length=255)
+
+class Zone(models.Model):
+    region = models.ForeginKey(Region, on_delete=models.CASCADE)
+    name = CharField(max_length=255)
+
+class Woreda(models.Model):
+    zone = models.ForeginKey(Zone, on_delete=models.CASCADE)
+    name = CharField(max_length=255)
 
 class Address(models.Model):
     """ Implement common address attributes
@@ -22,11 +39,21 @@ class Address(models.Model):
             - Woreda
             - House Number
     """
-    region = models.CharField(max_legth=6)
-    zone = models.CharField(max_legth=6)
-    woreda = models.CharField(max_legth=6)
-    house_number = models.CharField(max_legth=6)
-    
+    region = models.ForeginKey(Region, on_delete=models.SET_NULL, null=True)
+    zone = ChainedForeginKey(
+            Zone,
+            chained_field='region',
+            chained_models_field='region',
+            show_all=False,
+        )
+    woreda = ChainedForeginKey(
+            Woreda,
+            chained_field='woreda',
+            chained_models_field='woreda',
+            show_all=False,
+        )
+    house_number = models.CharField(max_length=6)
+
     class Meta:
         abstract = True
 
