@@ -34,6 +34,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites', # Additional
 
+    # Third party
+
+    'smart_selects',
+    
     # Local
 
     'ausers.apps.AusersConfig',
@@ -147,3 +151,8 @@ STATIC_URL = '/static/'
 # Authentication conf
 
 AUTH_USER_MODEL = 'ausers.User'
+
+
+# Smart Select conf
+
+JQUERY_URL = True
