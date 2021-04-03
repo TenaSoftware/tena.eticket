@@ -8,6 +8,8 @@ from pathlib import Path
 
 from decouple import config
 from dj_database_url import parse as db_url
+from django.conf import global_settings
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,7 +21,6 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -33,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sites', # Additional
 
     # Local
-    
+
     'ausers.apps.AusersConfig',
 ]
 
@@ -102,7 +103,31 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGES = (
+    ('am', _('Amharic')),
+    ('am-or', _('Oromiffa')),
+    ('en', _('English')),
+)
+
+EXTRA_LANG_INFO = {
+    'am': {
+        'bidi': False,
+        'code': 'am',
+        'name': 'Amharic',
+        'name_local': u"አማርኛ"
+    },
+    'am-or': {
+        'bidi': False,
+        'code': 'am_or',
+        'name': 'Oromiffa',
+        'name_local': u"Oromiffa"
+    }
+
+}
+
+LANG_INFO = dict(django.conf.locale.LANG_INFO, **EXTRA_LANG_INFO)
+
+django.conf.locale.LANG_INFO = LANG_INFO
 
 TIME_ZONE = 'UTC'
 
