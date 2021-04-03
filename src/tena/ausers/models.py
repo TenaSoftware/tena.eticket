@@ -16,13 +16,11 @@ from smart_selects.db_fields import ChainedForeignKey
 
 class User(AbstractUser):
     """ Custome User Model with to generalizer all users of platform. """
-    email = None
     SEX = (
         ('M', _('Male')),
         ('F', _('Female'))
     )
     sex = models.CharField(_('Sex'), max_length=2, choices=SEX)
-    REQUIRED_FIELDS = []
 
 class Region(models.Model):
     name = models.CharField(_('Name'), max_length=255)
