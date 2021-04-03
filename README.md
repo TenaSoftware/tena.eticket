@@ -1,6 +1,6 @@
  ![ASTU_LOGO](img/banner.png)
 
-# <p align=center>Adama Since and Technology University</p>
+# <p align=center>Adama Science and Technology University</p>
 # <p align=center>School of Electrical Engineering and Computing</p>
 # <p align=center>Department of Computer Science and Engineering</p>
 # <p align=center>Fundamental of Software Engineering (3205)</p>
