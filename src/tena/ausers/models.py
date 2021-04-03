@@ -25,13 +25,28 @@ class User(AbstractUser):
 class Region(models.Model):
     name = models.CharField(_('Name'), max_length=255)
 
+    def __str__(self):
+        return self.name
 class Zone(models.Model):
     region = models.ForeignKey(Region, verbose_name=_('Region'), on_delete=models.CASCADE)
     name = models.CharField(_('Name'), max_length=255)
 
+    def __str__(self):
+        return f'{self.name} | {self.region.name}'
+
 class Woreda(models.Model):
-    zone = models.ForeignKey(Zone, verbose_name=_('Zone'), on_delete=models.CASCADE)
+    region = models.ForeignKey(Region, verbose_name=_('Region'), on_delete=models.CASCADE)
+    zone = ChainedForeignKey(
+            Zone,
+            verbose_name=_('Zone'),
+            chained_field='region',
+            chained_model_field='region',
+            show_all=False,
+        )
     name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f'{self.name} | {self.region.name}'
 
 class Address(models.Model):
     """ Implement common address attributes
@@ -51,8 +66,8 @@ class Address(models.Model):
     woreda = ChainedForeignKey(
             Woreda,
             verbose_name=_('Woreda'),
-            chained_field='woreda',
-            chained_model_field='woreda',
+            chained_field='zone',
+            chained_model_field='zone',
             show_all=False,
         )
     house_number = models.CharField(_('House number'), max_length=6)
@@ -67,3 +82,6 @@ class Customer(User, Address):
                 ' or 09******** format.'
     )
     phone_number = models.CharField(_('Phone number'), max_length=13, validators=[phone_regex])
+
+    class Meta:
+        verbose_name = _('custome')
