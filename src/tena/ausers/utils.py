@@ -15,8 +15,8 @@ class TwilioVerifyer:
     ACCOUNT_SID = config('ACCOUNT_SID', cast=str)
     AUTH_TOKEN = config('AUTH_TOKEN', cast=str)
     SERVICE_ID = config('SERVICE_ID', cast=str)
-    INTERNATIONAL = r'\+2519\d{8}$'
-    LOCAL = r'09\d{8}$'
+    INTERNATIONAL = r'\+2519\d{8}$' # E.16 format phone number
+    LOCAL = r'09\d{8}$' # Local phone number 
 
     def __init__(self):
         """ Initialize verifer using client """
