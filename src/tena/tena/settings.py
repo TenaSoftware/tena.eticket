@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'smart_selects',
     'django_extensions',
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     # Local
 
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -155,8 +155,11 @@ STATIC_URL = '/static/'
 
 # Authentication conf
 
-AUTH_USER_MODEL = 'ausers.User'
-
+AUTH_USER_MODEL = 'ausers.DefaultUser'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'ausers.backends.CustomerBackend'
+]
 
 # Smart Select conf
 
