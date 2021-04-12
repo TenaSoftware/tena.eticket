@@ -40,15 +40,16 @@ INSTALLED_APPS = [
 
     'smart_selects',
     'django_extensions',
-    # 'debug_toolbar',
+    'debug_toolbar',
 
     # Local
 
     'ausers.apps.AusersConfig',
+    'pages',
 ]
 
 MIDDLEWARE = [
-    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -78,6 +79,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tena.wsgi.application'
 
+
+# Session
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -156,11 +160,16 @@ STATIC_URL = '/static/'
 # Authentication conf
 
 AUTH_USER_MODEL = 'ausers.DefaultUser'
+
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'ausers.backends.CustomerBackend'
 ]
 
+LOGIN_URL = '/auth/login/'
+#LOGIN_REDIRECT_URL
+LOGOUT_URL = '/auth/logout/'
+LOGOUT_REDIRECT_URL = '/auth/login/'
 # Smart Select conf
 
 USE_DJANGO_JQUERY = True
