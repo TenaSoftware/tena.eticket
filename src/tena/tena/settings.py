@@ -16,98 +16,97 @@ from django.utils.translation import gettext_lazy as _
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
-INTERNAL_IPS = ['127.0.0.1'] # Need for debug_toolbar
+INTERNAL_IPS = ["127.0.0.1"]  # Need for debug_toolbar
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.sites', # Additional
-
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.sites",  # Additional
     # Third party
-
-    'smart_selects',
-    'django_extensions',
-    'debug_toolbar',
-
+    "smart_selects",
+    "django_extensions",
+    "debug_toolbar",
     # Local
-
-    'ausers.apps.AusersConfig',
-    'pages',
+    "ausers.apps.AusersConfig",
+    "pages",
 ]
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'tena.urls'
+ROOT_URLCONF = "tena.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "templates"],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'tena.wsgi.application'
+WSGI_APPLICATION = "tena.wsgi.application"
 
 # Session
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
 # Database
 
 DATABASES = {
-    'default': config(
-        'DATABASE_URL',
-        default='sqlite:///' / BASE_DIR / 'db.sqlite3',
-        cast=db_url
+    "default": config(
+        "DATABASE_URL", default="sqlite:///" / BASE_DIR / "db.sqlite3", cast=db_url
     )
 }
+DATABASES['default'].update({
+    'TEST': {
+        'NAME': 'tena_test_db',
+    }
+})
 
 
 # Password validation
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -115,32 +114,26 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 
 LANGUAGES = (
-    ('am', _('Amharic')),
-    ('am-or', _('Oromiffa')),
-    ('en', _('English')),
+    ("am", _("Amharic")),
+    ("am-or", _("Oromiffa")),
+    ("en", _("English")),
 )
 
 EXTRA_LANG_INFO = {
-    'am': {
-        'bidi': False,
-        'code': 'am',
-        'name': 'Amharic',
-        'name_local': u"አማርኛ"
+    "am": {"bidi": False, "code": "am", "name": "Amharic", "name_local": u"አማርኛ"},
+    "am-or": {
+        "bidi": False,
+        "code": "am_or",
+        "name": "Oromiffa",
+        "name_local": u"Oromiffa",
     },
-    'am-or': {
-        'bidi': False,
-        'code': 'am_or',
-        'name': 'Oromiffa',
-        'name_local': u"Oromiffa"
-    }
-
 }
 
 LANG_INFO = dict(django.conf.locale.LANG_INFO, **EXTRA_LANG_INFO)
 
 django.conf.locale.LANG_INFO = LANG_INFO
 
-TIME_ZONE = 'Africa/Addis_Ababa'
+TIME_ZONE = "Africa/Addis_Ababa"
 
 USE_I18N = True
 
@@ -151,31 +144,29 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'assests'
-STATIC_FIELS_DIRS = (
-    BASE_DIR / 'pages',
-)
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "assests"
+STATIC_FIELS_DIRS = (BASE_DIR / "pages",)
 # Media files
 
-MEDIA_URL = '/uploads/'
-MEDIA_ROOT = BASE_DIR / 'uploads'
+MEDIA_URL = "/uploads/"
+MEDIA_ROOT = BASE_DIR / "uploads"
 
 # Authentication conf
 
-AUTH_USER_MODEL = 'ausers.User'
+AUTH_USER_MODEL = "ausers.User"
 
 AUTHENTICATION_BACKENDS = [
-    'ausers.backends.CustomerBackend',
+    "ausers.backends.CustomerBackend",
 ]
 
-LOGIN_URL = '/auth/login/'
+LOGIN_URL = "/auth/login/"
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = "/"
 
-LOGOUT_URL = '/auth/logout/'
+LOGOUT_URL = "/auth/logout/"
 
-LOGOUT_REDIRECT_URL = '/auth/login/'
+LOGOUT_REDIRECT_URL = "/auth/login/"
 
 # Smart Select conf
 
@@ -183,5 +174,5 @@ USE_DJANGO_JQUERY = True
 
 # Email Conf
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = BASE_DIR / 'emails'
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "emails"
