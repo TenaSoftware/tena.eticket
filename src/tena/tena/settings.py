@@ -79,12 +79,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tena.wsgi.application'
 
-
 # Session
+
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 
 # Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default': config(
@@ -96,7 +95,6 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -115,7 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGES = (
     ('am', _('Amharic')),
@@ -153,23 +150,38 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'assests'
+STATIC_FIELS_DIRS = (
+    BASE_DIR / 'pages',
+)
+# Media files
+
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
 
 # Authentication conf
 
-AUTH_USER_MODEL = 'ausers.DefaultUser'
+AUTH_USER_MODEL = 'ausers.User'
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'ausers.backends.CustomerBackend'
+    'ausers.backends.CustomerBackend',
 ]
 
 LOGIN_URL = '/auth/login/'
-#LOGIN_REDIRECT_URL
+
+LOGIN_REDIRECT_URL = '/'
+
 LOGOUT_URL = '/auth/logout/'
+
 LOGOUT_REDIRECT_URL = '/auth/login/'
+
 # Smart Select conf
 
 USE_DJANGO_JQUERY = True
+
+# Email Conf
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'emails'
