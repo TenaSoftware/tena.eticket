@@ -14,8 +14,9 @@
     * 1.4.1 **[Technical feasibility](#141-technical-feasibility)**
     * 1.4.2 **[Operational feasibility](#142operational-feasibility)**
     * 1.4.3 **[Economical feasibility](#143-economical-feasibility)**
-    * 1.4.4 **[Schedule feasibility](#144-schedule-feasibility)**
-    * 1.4.5 **[Market feasibility](#145-market-feasibility)**
+    * 1.4.4 **[Budget feasibility](#144-budget-feasibility)**
+    * 1.4.5 **[Schedule feasibility](#145-schedule-feasibility)**
+    * 1.4.6 **[Market feasibility](#146-market-feasibility)**
   * 1.5 **[Scope and limitation](#15-scope-and-limitation)**
     * 1.5.1 **[Scope](#151-scope)**
     * 1.5.2 **[Limitation](#152-limitation)**
@@ -39,24 +40,10 @@
 
 # Chapter One
 ## 1.1 Introduction
-Since the dawn of time, it’s been the characteristic of man kind to travel for
-the purpose of hunting, gathering and other basic human needs. Even the
-first man kind are able to move, but the way we(Homo Sapiens) move much
-unique from others. Transportation has been a big factor for human
-civilization. For example, in ancient times Rome become a great empire by
-the development of the paved roads t transport their great army.
-In different time peoples use different kind of transportation system, some
-use animals and others use products of engineering, but now a day
-transportation is the root of every aspect of life. The main reason behind
-every scene of this transport evolution is time. People wants to take time
-on work than transport, this create various way of transportation, animals
-to cars, trains to airplanes.
+Since the dawn of time, it’s been the characteristic of mankind to travel for the purpose of hunting, gathering and other basic human needs. Even the first man kind are able to move, but the way we (Homo Sapiens) move much unique from others. Transportation has been a big factor for human civilization. For example, in ancient times Rome become a great empire by the development of the paved roads transport their great army.
+In different time peoples use different kind of transportation system, some use animals and others use products of engineering, but now a day, transportation is the root of every aspect of life. The main reason behind every scene of this transport evolution is time. People wants to take time on work than transport, this creates various way of transportation, animals to cars, trains to airplanes.
 
-Since Tena transport routine and ticket administration platform give
-attention to time, we are putting forward a solution for Ethiopia transport
-system through private transport provider. It provides a fast and time
-saving way of managing and serving services for both companies and
-customers.
+Since Tena transport route and ticket administration platform give attention to time, we are putting forward a solution for Ethiopia transport system through private transport provider. The platform provides a fast and secure way of managing and forwarding services for both companies and customers.
 
 Main futures included in the platform are
 * All in one ticket reservation
@@ -65,49 +52,16 @@ Main futures included in the platform are
 * Fleet Management
 
 ### 1.1.1 Background
-As it is a basic human instinct to travel, man kind has been perfecting
-the means of transportation for millennia. From bare feet to the invention
-of the wheel, from basic carts to complicated magnetic bullet trains,
-technology has advanced to the point where we can travel thousands of
-kilometers in mere hours. The main proponent of this development is man
-kind’s never ending quest to make transportation cheaper while at the same
-time making it time efficient as well as more comfortable. In the capitalistic
-society we live in, this has enabled the private sector to make millions, even
-billions, developing such technology. However, if we are to provide fair
-transportation for all, there is still a long road ahead in terms of
-affordability, access and efficiency.
+As it is a basic human instinct to travel, mankind has been perfecting the means of transportation for millennia2. From bare feet to the invention of the wheel, from basic carts to complicated magnetic bullet trains. Technology has advanced to the point where we can travel thousands of kilometers in mere hours. The main proponent of this development is mankind’s never-ending quest to make transportation cheaper while at the same time making it time efficient as well as more comfortable. In the capitalistic society we live in, this has enabled the private sector to make millions, even billions, developing such technology. However, there is still a long road ahead in terms of affordability, access and efficiency.
 
-To understand the effect mobility on the world, the Corona Virus (Covid 19)
-informed everyone about how important transportation was. Since there
-are various transportation means, people tend to choose the most
-convenient one at the time. Therefor customer experience is vital part
-because it will dictate how they find the best route to reach their
-destination with the optimal economic Vs comfort trade off all the while
-making this process as smooth as possible, as it is in developed nations.
-Although the transportation sector has come a long way, it still has
-fundamental problems to overcome in order to be on par with international
-standards.
-chapter1.md
+To understand the effect mobility on the world, the Corona Virus (Covid 19) informed everyone about how important transportation was. Since there are various transportation means, people tend to choose the most convenient one at the time. Therefor customer experience is vital part, because it will dictate how they find the best route to reach their destination with the optimal economic Vs comfort trade off all the while making this process as smooth as possible, as it is in developed nations. Although the transportation sector has come a long way, it still has fundamental problems to overcome in order to be on par with international standards.
+
 ### 1.1.2 Statement of problem
-The transportation system in Ethiopia has encounter involving many
-problems. Those problems are a factor of different governmental and
-individuals. As we tried to mention earlier time is most important thing man
-kinds have, but choosing transport providers and reserving ticket consume
-time. Example if some one from rural area wants to reserve ticket he/she
-has to move nearest city with ticket office. In addition to time availability is
-another major problem for customers. This can be described as to ways,
-first ticket office, since transport companies can’t create ticket office in
-every town of Ethiopia, there will be incompetency between individuals.
-The second one is availability of infrastructure which is not in the scope of this project. Even though people have enough time do staffs in the current
-system, they required to have more money depends on where they live. In
-in the worst case the have to do it twice one for reservation and another for travel. As developing country, we believe those problems are solvable using
-modern technologies.
+The transportation system in Ethiopia has encounter involving many problems. Those problems are a factor of different governmental and individuals. As we tried to mention earlier time is most important thing mankind have, but choosing transport providers and reserving ticket consume time. Example if someone from rural area wants to reserve ticket, he/she has to move nearest city with ticket office. In addition to time, availability is another major problem for customers. This can be described in two ways, first in-terms of ticket offices, since transport companies are not able to create ticket offices in every town of Ethiopia, there will be imbalance between individuals. The second one is availability of infrastructure cars, roads and many more, but it is not in the scope of the project. Even though people have enough time do tasks in the current system, they required to have more money depends on where they live. In the worst case they have to have more money, for reservation and travel. As developing country, we believe those problems can be solved using modern technologies.
 
 ### 1.1.3 Purpose of the project
-The purpose of the project is to provide secure and safe way to administrate
-route, fast and money saving method of ticket reservation. Also this project
-tightly tries to balance the difference between class of man kid’s by
-providing easy to use, attainable quality products.
+The purpose of the project is to provide fast, secure and safe way to administrate route, time and money saving method of ticket reservation. Also, this project tightly tries to balance the difference between class of citizen of Ethiopia by providing easy to use, attainable quality products.
+
 
 ## 1.2 Team composition
 <table>
@@ -162,16 +116,22 @@ providing easy to use, attainable quality products.
       <td>Wendirad Demelash</td>
     </tr>
     <tr>
-      <td colspan=3>System architecture analysis, design, architecture, implementation and documentation. </td>
+      <td colspan=3 rowspan=2>System architecture analysis, design, architecture, implementation and documentation. </td>
       <td>Wendirad Demelash</td>
+    </tr>
+    <tr>
+    <td>Getabalew Temesgen</td>
     </tr>
     <tr>
       <td colspan=3>UI design, architecture, implementation and documentation.</td>
       <td>Getabalew Temesgen</td>
     </tr>
     <tr>
-      <td colspan=3>Quality assurance design, architecture, implementation and documentation.</td>
+      <td colspan=3 rowspan=2>Quality assurance design, architecture, implementation and documentation.</td>
       <td>Getabalew Temesgen</td>
+    </tr>
+    <tr>
+      <td>Wendirad Demelash</td>
     </tr>
     <tr>
       <td colspan=3 rowspan=2>Database design, architecture, implementation and documentation.</td>
@@ -189,104 +149,112 @@ providing easy to use, attainable quality products.
 
 ## 1.3 Objective of the project
 ### 1.3.1 General objective
-The general objective of the project is to create dynamic web based
-transport administration platform. Tena aims to create integrated
-environment through out the transport providers also centralized date to
-customers.
+General objective of the project is to create dynamic web-based transport administration platform. Tena aims to create integrated environment throughout the transport providers also centralized database to customers, which helps to access all providers route data in one place and reserve tickets from anywhere.
 
 ### 1.3.2 Specific objective
-* Designing expertise user experience and user interface
-* Providing light weight web application platform
-* Creating centralized database for transport providers
-* Manipulating specific route in a specific transport provider
-* Providing integration tools for other developers
-* Decreasing time and many waste by making system available online as much as possible
-* Expanding transport providers business by increasing availability thorough out the country
-* Increasing customers satisfaction by making the platform more interactive both with transport providers and developers
-* Fixing non transport issues like corruption by specifically collecting and providing static and analyzed data.
+The following objectives are auxiliary for general objective of the platform
+
+* Realize the current system
+* Defining foundation of data for the project
+* Select implementation tools according to project requirements
+* Design and analyze system architecture and database
+* Reveal the working model of platform.
+* Implement conferring to requirements using selected implementation tools
+* Test the platform
+* Deploy the platform
 
 ## 1.4 Feasibility
 According to our analysis, the project has high probability of feasibility. Let’s describe the project feasibility in detail.
 
 ### 1.4.1 Technical feasibility
 During our analysis we take two things in our consideration
-* Whether the required technology is available or not?
-* Whether the required resources are available or not?
+* Whether the required technology is available or not
+* Whether the required resources are available or not?  
 
-Since we are developing dynamic web platform, we are out of problem in availability of the technology. Today nearly all general purpose programming languages have web framework. Also integration of website to power full database is easy.
-
-Even if web development is required technical resources like knowledge it is available thorough out learning with out any payment.
+Since we are developing dynamic web platform, we are almost out of problem in availability of the technology. Today nearly all general-purpose programming languages have web framework. Also, integration of website to power full database is easy.
+Even if web development is required technical resources like knowledge, it is available thorough out learning without any payment. This makes our project technically feasible.
 
 ### 1.4.2 Operational feasibility
-Relative to technical feasibility operational feasibility may be less, but it does not mean achievable. While we are analyzing operational feasibility we mainly concerned about deployment and operating of the project.
-
-As a result we are guaranteed that, the project can be deployed from Ethiopia using PaaS (Platform as a Service) even using on-premises. On operating side it is feasible due to the following factors.
-* The platform reduce operational time that consume during paper based system.
-* Customers can provide their ideas or complains freely.
-* The project benefits the company by making competitive .
-* Customers many not have to move long way to check and reserve ticket for different transport providers.
-* Through the feedback of customers transport providers able to manage there price.
-
-Due to such factors the project is considered to be operationally feasible.
+Relative to technical feasibility operational feasibility may be less, but it does not mean unachievable. While we are analyzing operational feasibility we mainly concerned about deployment and operating of the project.
+As a result, we are guaranteed that, the project can be deployed from Ethiopia using PaaS (Platform as a Service) or using on-premises deployment strategies.
+On operating side, it is feasible, because it doesn’t require detail knowledge about the technologies. In addition, anyone, who have access internet can operate the platform easily. Due to such factors the project is considered to be operationally feasible.
 
 ### 1.4.3 Economical feasibility
-Although we are in start up, the project can be feasible economically. Due to the following properties of the project.
-* Since it implementation does not need more resources , the project can be built in open-source materials safely and securely.
-* Because the existing system has been common for a long time of period through out the country, it is easy to collecting requirements.
+Using this platform makes both customers and transport providers economically feasible as a result of the following platform features.
+* Save extra money, which is wasted when a customer wants to buy a single ticket
+* Make transport providers more productive, since the
 
-Those scenarios are validated from our budget.
+platform gives fast online services, and also, increase companies service throughout the country.
 
-### 1.4.4 Schedule feasibility
-Since we are full time student we are giving our attention to projects and school activities. We are checking our project schedule feasibility from two points, scope of project and schedule of project team member individuals. We analyze the project as schedule feasible because team members are punctual and motivated and experienced in work. Also the project use small scope specifically private transport providers it can be run in schedule, unless different world wide problems occur.
+### 1.4.4 Budget feasibility
+Although we are in start-up, the project can be feasible economically. Due to the following properties of the project.
+* Since its implementation does not need extra resources, the project can be built in open-source materials safely and securely.
+* Because the existing system has been common for a long time of period throughout the country, it is easy to collecting requirements.
 
-### 1.4.5 Market feasibility
+Those scenarios make the project achievable from our budget.
+
+### 1.4.5 Schedule feasibility
+Since we are full time student, we are giving our attention to projects and school activities. We are checking our project schedule feasibility from two points, scope of project and schedule of team member individuals.
+We analyze the project as schedule feasible because team members are punctual, motivated and interested in the project. Also, the project use small scope specifically private transport providers, so it can be done with in schedule, unless unexpected event occur.
+
+### 1.4.6 Market feasibility
 Out market feasibility analysis depends of the following factor
 * Current marketing system
 * Payment integration
 
-From the above points we can validate the project. From existing system, since it is manual the project can easily competitive in the market, also technology is being used in the country having online market is great idea. Although Ethiopia does not varieties online payment methods, there is still available integration tools to be competitive in the market.
+From the above points we can validate the project. From existing system, since it is manual the project can easily competitive in the market, also technology is being used in the country having online market is great idea. Although Ethiopia does not have many online payment methods, but there are still available integration tools to be competitive in the market.
 
 ## 1.5 Scope and limitation
 ### 1.5.1 Scope
-At this stage, first version of the project our scope is limited. Since the project is scalable, the scope may change for next time. The scope of the project is mainly to concerns part of community whose work is dependent on transportation. Also we are including this private transport providers as a companies in our scope. In the platform scope is limited to the following tasks
-* Allow user authentication.
-* Taking transaction online payment thought Ethiopian banks.
-* Static display of data using graph and maps.
-* Making CRUD operation on employees
-* Providing digital receipt for customers
-* Replacing paper based ticket reservation on ticket offices
-* Defining and Manipulating routes
-* Accepting appointments for different time and days.
-* Providing clear data and for choosing from routes
-* Reserving ticket online
-* Notifying customers before travel
-* Providing customer profile to transport providers
+At this stage, first version of the project our scope is limited. Since the project can scale up, the scope may change from the first time.
+The scope of the project is mainly to concerns part of community whose work is dependent on transportation. Also, we are including this private transport providers as a company in our scope.
+In the platform scope is limited to the following tasks
+    • Taking transaction online payment thought Ethiopian banks.
+    • Display static data using graph.
+    • Managing operations of employees
+    • Providing digital receipt for customers
+    • Providing multiple choice of districts (route) for the customers
+    • Reserve tickers online
+    • Defining and Manipulating routes
+    • Accepting appointments for different time and days.
+    • Notifying customers before travel
+    • Providing customer profile to transport providers
 
 ### 1.5.2 Limitation
+* Does not provide total employee management system
+* Public transport providers are not included in the platform
 * Since the platform is online it required internet connection
-* People in Ethiopia has not experiences of online transactions
-* Customer may required to have same basic website app user
-experience.
+* It requires continues electrical power supply for ticket offices
+* People in Ethiopia has not experienced of online transactions
+* Customer may require to have same basic website app user experience.
+
 
 ## 1.6 Significance of the project
-Tena transportation and ticket administration platform has the following major significance
-* By making transaction online the project help’s in the growth of Ethiopia economy and online payment systems
+Tena transportation route and ticket administration platform has the following major significance
+
+* By making transaction online the project aim to help in the growth of Ethiopia economy and online payment systems
 * Balance transport system by creating competition between transport providers.
-* Customers check their travel record in an organized way.
-* Customers can reserve ticket whenever available and where ever they are using their smart phone on browser.
-* Because the system notify travelers earlier, decrease customers chance of missing their buses.
+* Organize travel records for customers.
+* Reserving ticket for customers whenever available and where ever they are using their smart phone.
+* Because the system notifies travelers earlier, decrease customers chance of missing their buses.
 * Since platform has centralized database, and also connected to internet, customers can check their status using simple but secure authentication system.
 * Transport provider can control their employee status in every ticket office.
 * Reduce paper work and data loose by providing digital receipt through SMS.
 * Allow creating different schedule for routes, also accept appointments from customer.
-* Handle simple and complex routes.
 * Providing data visualization for transport providers and customers.
+* Allow other developers to create other system by providing integrations tools for this platform.
+* Decreasing time and many wastes by making system available online as much as possible.
+* Expanding transport providers business by increasing availability thorough out the country.
+* Increasing customers satisfaction by making the platform more interactive both with transport providers and developers.
+* Fixing non transport issues like corruption by specifically collecting and providing static and analyzed data.
+* Decrease time consumption of the process by gathering and providing all transport providers route data in one place.
 
 ## 1.7 Methodology
-In this project we have applied the following different methodologies in different parts of project phase.
+In this project we have applied the following different methodologies in different parts of project phase
 
 ### 1.7.1 Data source
-The platform gather information mainly from customers and transport providers to manipulate and function properly.
+The platform gathers information mainly from customers and transport providers to manipulate and function properly.
+
 
 ### 1.7.2 Fact finding methodologies
 for this project, we have chosen the following methods to attain data.
@@ -294,11 +262,14 @@ for this project, we have chosen the following methods to attain data.
 * Brain storming
 
 ### 1.7.3 System development methodology
-In this project we follow spiral software process model because
-* The project cover large sector.
-* Since it contains new ideas, that may creates release frequently.
-* The platform interact with transactions, we need to analyze risk in
-each steps.
+In this project we follow V-shaped software process model because
+* It is easy to use
+* The project needs to be tested every time.
+* Since it contains new ideas, that may create release frequently.
+* The platform interacts with transactions, we need high reliability.
+* Solution and technologies are known.
+* Handle changing requirements
+
 
 ## 1.8 Development tools
 ### 1.8.1 Software tools
@@ -342,14 +313,14 @@ each steps.
       <td>Python web framework to create dynamic web content.</td>
     </tr>
     <tr>
-      <td>MySql 8</td>
-      <td>Relational Database to manipulate and store data permanently.</td>
+      <td>PostgreSQL 13.2</td>
+      <td>free and open-source relational database management system </td>
     </tr>
     <tr>
       <td rowspan=2>4.</td>
       <td rowspan=2>Code editing tool</td>
-      <td>Sublime text 3</td>
-      <td>Sophisticated text editor for code, markup and prose.</td>
+      <td>Atom 1.55.0</td>
+      <td>free and open-source text and source code editor.</td>
     </tr>
     <tr>
       <td>Vim 8.2</td>
@@ -445,29 +416,29 @@ each steps.
 
 ## 1.9 Testing procedures
 ### 1.9.1 Unit testing
-In this project we use Django unit tasting app to check an individual part of
-the platform works.
-### 1.9.2 Integration testing
-For an integration testing we use selenium testing framework, and check an
-integration of different parts of app.
-## 1.10 Overview of project phase
-Since we have following spiral software process model the exact number of phases needed to develop the product depending upon the project risk. Although describing project phase is difficult, it is not impossible. For this project we define or phase in terms of spiral model quadrants.
+In this project we use Django unit tasting app to check an individual part of the platform works.
 
-* Objectives determination and identify alternatives solution
-  * Gather requirements.
-  * Identify a problem.
-  * Design system solution
-* Identify and resolve risks
-  * Evaluate project risks
-  * Test the platform
-* Develop next version of the product
-* Review and plan for next phase
+### 1.9.2 Integration testing
+For an integration testing we use selenium testing framework, and check an integration of different parts of app.
+
+## 1.10 Overview of project phase
+Since we have following V-shaped software process model, there will be different phases.
+* Project and requirements planning phase
+  * Production, operation & maintenance
+*  Product requirements and specification analysis
+  * System acceptance testing
+* Architecture high-level design
+  * Integration and testing
+* Detailed design
+  * Unit testing
+* Coding
+
 ### 1.11 Task and schedule
 Because our tentative school schedules some of our end dates became tentative.
 
 |No  | Task name |Start date | End date | Duration (Day)|
 | :-: | :- | :-: | :-: | :-: |
-|1. |Requirement gathering|January 15, 2021|March 1, 2021|45 |
+|1. |Requirement gathering|January 15, 2021|March 1, 2021|4 |
 |2.|Analysis|March 1, 2021|March 13, 2021|12|
 |3.|Documentation|March 11, 2021|Tentative|-|
 |4.|Architecture and design|March 26, 2021|March 29, 2021|3|
