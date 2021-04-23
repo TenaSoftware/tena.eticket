@@ -1,7 +1,7 @@
 
 ## Table of Content
 * **[Acknowledgment](#acknowledgment)**
-1. **[Chapter One](#chapter-one)**
+1. **[Chapter One](#chapter-one:-introduction)**
   * 1.1 **[Introduction](#11-introduction)**
       * 1.1.1 **[Background](#111-background)**
       * 1.1.2 **[Statement of problem](#112-statement-of-problem)**
@@ -34,13 +34,24 @@
   * 1.10 **[Overview of project phase](#110-overview-of-project-phase)**
   * 1.11 **[Task and schedule](#111-task-and-schedule)**
   * 1.12 **[Required resources with cost](#112-required-resources-with-cost)**
+2. **[Chapter Two](#chapter-two:-current-system)**
+  * 2.1 **[Major functionality of the current system](#21-major-functionality-of-the-current-system)**
+  * 2.2 **[Users of current system](#22-users-of-current-system)**
+  * 2.3 **[Problems of current system](#23-problems-of-current-system)**
+  * 2.4 **[Business role of the system](#24-business-role-of-the-system)**
 
+
+
+
+>
+>
 > ## Acknowledgment
 > We would like to thank our instructor Ms. Yordanos for initiating and encouraging us to explore and work on the documentation part of our project.
 
-# Chapter One
+# Chapter One: Introduction
 ## 1.1 Introduction
 Since the dawn of time, it’s been the characteristic of mankind to travel for the purpose of hunting, gathering and other basic human needs. Even the first man kind are able to move, but the way we (Homo Sapiens) move much unique from others. Transportation has been a big factor for human civilization. For example, in ancient times Rome become a great empire by the development of the paved roads transport their great army.
+
 In different time peoples use different kind of transportation system, some use animals and others use products of engineering, but now a day, transportation is the root of every aspect of life. The main reason behind every scene of this transport evolution is time. People wants to take time on work than transport, this creates various way of transportation, animals to cars, trains to airplanes.
 
 Since Tena transport route and ticket administration platform give attention to time, we are putting forward a solution for Ethiopia transport system through private transport provider. The platform provides a fast and secure way of managing and forwarding services for both companies and customers.
@@ -52,7 +63,9 @@ Main futures included in the platform are
 * Fleet Management
 
 ### 1.1.1 Background
-As it is a basic human instinct to travel, mankind has been perfecting the means of transportation for millennia2. From bare feet to the invention of the wheel, from basic carts to complicated magnetic bullet trains. Technology has advanced to the point where we can travel thousands of kilometers in mere hours. The main proponent of this development is mankind’s never-ending quest to make transportation cheaper while at the same time making it time efficient as well as more comfortable. In the capitalistic society we live in, this has enabled the private sector to make millions, even billions, developing such technology. However, there is still a long road ahead in terms of affordability, access and efficiency.
+As it is a basic human instinct to travel, mankind has been perfecting the means of transportation for millennia2. From bare feet to the invention of the wheel, from basic carts to complicated magnetic bullet trains. Technology has advanced to the point where we can travel thousands of kilometers in mere hours. The main proponent of this development is mankind’s never-ending quest to make transportation cheaper while at the same time making it time efficient as well as more comfortable.
+
+In the capitalistic society we live in, this has enabled the private sector to make millions, even billions, developing such technology. However, there is still a long road ahead in terms of affordability, access and efficiency.
 
 To understand the effect mobility on the world, the Corona Virus (Covid 19) informed everyone about how important transportation was. Since there are various transportation means, people tend to choose the most convenient one at the time. Therefor customer experience is vital part, because it will dictate how they find the best route to reach their destination with the optimal economic Vs comfort trade off all the while making this process as smooth as possible, as it is in developed nations. Although the transportation sector has come a long way, it still has fundamental problems to overcome in order to be on par with international standards.
 
@@ -449,3 +462,45 @@ Because our tentative school schedules some of our end dates became tentative.
 |:-:|-|:-:|:-:|:-:|
 |1.|Personal Computer <ul><li>HP 3125</li><li>AMD Dual-Core processor (1.75 GHz)</li><li>1366 x 768</li><li>4GB RAM</li><li>11.6”</li></ul>|1|6000|6000|
 |2.|Windows 10 Home|1|5596.14|5596.14|
+
+# Chapter Two: Current system
+
+## 2.1 Major functionality of the current System
+Current system of ticket reservation and administration may be different from one provider to another, but there is basic similarity which makes us to generalize the major functionality of current system.
+
+In the current system customers, they should be presented (represented) in place to take tickets. Which follows the following processes.
+* Select one company randomly or repeatedly, which provide transport to targeted destination.
+* Although there is a transportation service to their destination, they have to present earlier because of limited number of tickets.
+* They will take, paper-based receipt and keep that until they start traveling.
+* After having ticket, there must be on time, to travel.
+
+From providers side, they manage their tickets, routes and employees using different manual and digital approaches.
+
+## 2.2 Users of current system
+
+Current system has the following users
+* Travelers (Customers)
+  * Peoples, whose use public transportation to travel from one place to place.
+* Transport providers
+  * Companies, that providers transportation to travelers.
+
+## 2.3 Problems of current system
+The current system has the following major problems, which affects both customers and transport providers.
+In the customers side, major problems are
+* Since customers have to do multiple tasks, that require more time. Which is much time wasting.
+* In addition to time, money is another resource, which will be consumed more than necessary.
+* Even if, customers have enough time and money to reserve ticket, there is low chance of getting tickets.
+
+In the transport providers side, the following points are major problems
+* Inefficiency, since it is manipulated by ticket offices, not by every individual, which makes the system slower, that cause inefficiency.
+* Unavailability is another problem for providers, that caused as result of limited number of ticket offices in specific city.
+* Organization of data is not main concern.
+* Some of the major problems of the system is corruption let’s look the following case. Employees in ticket office reserve for the first 5 to 10 tickets, and hide from customers. At the mean time when late customer come to reserve ticket, they sold reserved tickets with additional payment, which is not aim of a company.
+
+## 2.4 Business role of the system
+In the use of platform, we have the succeeding business rules
+* Transport companies should register in the platform.
+* Transport companies should create their employee and routes.
+*  Customers should register in the platform
+* Customers must have an account in any of supported bank.
+* Customers should select and made payment explicitly
