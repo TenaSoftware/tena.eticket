@@ -1,7 +1,7 @@
 
 ## Table of Content
 * **[Acknowledgment](#acknowledgment)**
-1. **[Chapter One](#chapter-one:-introduction)**
+1. **[Chapter One](#chapter-one-introduction)**
   * 1.1 **[Introduction](#11-introduction)**
       * 1.1.1 **[Background](#111-background)**
       * 1.1.2 **[Statement of problem](#112-statement-of-problem)**
@@ -34,7 +34,7 @@
   * 1.10 **[Overview of project phase](#110-overview-of-project-phase)**
   * 1.11 **[Task and schedule](#111-task-and-schedule)**
   * 1.12 **[Required resources with cost](#112-required-resources-with-cost)**
-2. **[Chapter Two](#chapter-two:-current-system)**
+2. **[Chapter Two](#chapter-two-current-system)**
   * 2.1 **[Major functionality of the current system](#21-major-functionality-of-the-current-system)**
   * 2.2 **[Users of current system](#22-users-of-current-system)**
   * 2.3 **[Problems of current system](#23-problems-of-current-system)**
