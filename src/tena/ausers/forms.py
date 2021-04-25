@@ -23,14 +23,15 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = Customer
         fields = (
+            "phone_number",
             "first_name",
             "last_name",
             "sex",
+            "date_of_birth",
             "region",
             "zone",
             "woreda",
             "house_number",
-            "phone_number",
         )
 
     def clean_phone_number(self):
