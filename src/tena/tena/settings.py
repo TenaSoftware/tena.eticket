@@ -21,7 +21,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 INTERNAL_IPS = ["127.0.0.1"]  # Need for debug_toolbar
 
@@ -86,11 +86,13 @@ DATABASES = {
         "DATABASE_URL", default="sqlite:///" / BASE_DIR / "db.sqlite3", cast=db_url
     )
 }
-DATABASES['default'].update({
-    'TEST': {
-        'NAME': 'tena_test_db',
+DATABASES["default"].update(
+    {
+        "TEST": {
+            "NAME": "tena_test_db",
+        }
     }
-})
+)
 
 
 # Password validation
@@ -145,8 +147,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = "/static/"
+
 STATIC_ROOT = BASE_DIR / "assests"
+
 STATIC_FIELS_DIRS = (BASE_DIR / "pages",)
+
 # Media files
 
 MEDIA_URL = "/uploads/"
