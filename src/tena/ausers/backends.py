@@ -8,6 +8,7 @@ Generated Manually from Linux terminal
 import re
 
 from django.contrib.auth.backends import ModelBackend
+from django.contrib.sites.shortcuts import get_current_site
 
 from ausers.models import Customer
 from ausers.utils import twilio_message
@@ -24,4 +25,7 @@ class CustomerBackend(ModelBackend):
             return None
         if re.match(r"^09\d{8}$", username):
             username = twilio_message.formated_number(username)
-        return super().authenticate(request, username, password, **kwargs)
+        user = super().authenticate(request, username, password, **kwargs)
+        if user and get_current_site(request) not in user.work_on.all():
+            return None
+        return user
