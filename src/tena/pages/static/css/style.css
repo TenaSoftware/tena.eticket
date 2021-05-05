@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: .5em;
+    width: 10em;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #BF4C61;
+}
+
+.nav {
+    background: #2D3E46;
+}
+
+.nav .logo>img {
+    width: 20vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    border-radius: 2.5vw;
+}
+
+.nav ul.nav-item {
+    list-style-type: none;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    background: linear-gradient(to top, #2D3E46, #5D6B84);
+}
+
+.nav ul.nav-item li.item {
+    display: inline;
+    margin: .25em .25em;
+    padding: .25em .5em;
+    border-radius: .25em;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 5vw;
+}
+
+.nav ul.nav-item li.item>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav div.promotion {
+    text-align: center;
+    margin: 0 0 .5em;
+    font-family: monospace;
+    font-size: 5vw;
+    font-variant: small-caps;
+    color: #F9F4F4;
+}
+
+.main div.bg-1 {
+    height: 8vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/background.svg");
+}
+
+.main div.body {
+    background-color: #D8DCDF;
+}
+
+
+.main div.body div:first-child,
+.main div.body div:last-child {
+    background-color: #fff;
+    height: 4em;
+}
+
+.main div.body div:first-child {
+    border-bottom-left-radius: 100%;
+}
+
+.main div.body div:last-child {
+    border-top-right-radius: 100%;
+}
+
+.main div.body div:nth-child(2) {
+  background-image: linear-gradient(#D8DCDF, #F9F4F4, #D8DCDF);
+}
+.main div.body div {
+    padding: 1em;
+    font-family: courier, arial, helvetica;
+    font-size: 5vw;
+    text-align: center;
+    background: #DDDCDF;
+}
+
+footer.footer {
+    background-color: #2D3E46;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    padding: .5em;
+    font-family: serif;
+    font-size: 2.5vw;
+    color: #F9F4F4;
+}
+
+footer.footer a {
+    color: dodgerblue;
+}

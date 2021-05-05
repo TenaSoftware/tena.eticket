@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    You are verifing your account using: {{ request.session.phone_number }}
+    <form action="{% url "verify-customer" %}" method="post"> {% csrf_token %}
+      {{ form.errors }}
+      <input type="hidden" name="verification">
+      {{ form.as_ul }}
+      <button type="submit">Verify</button>
+    </form>
+  </body>
+</html>
