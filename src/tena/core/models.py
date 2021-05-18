@@ -4,7 +4,6 @@ from ausers.models import Customer
 class Company(models.Model):
 	name = models.CharField(max_length=150)
 
-
 class Branch(models.Model):
 	company = models.ForeignKey(Company, on_delete=models.CASCADE)
 	name  = models.CharField(max_length=150)
@@ -30,6 +29,7 @@ class Route(models.Model):
 	bus = models.ManyToManyField(Bus)	
 	start_station = models.CharField(max_length=150)
 	destination = models.CharField(max_length=150)
+	is_active = models.BooleanField(default=True)
 	date_create = models.DateTimeField(auto_now_add=True)
 
 class Ticket(models.Model):
@@ -41,7 +41,6 @@ class Ticket(models.Model):
 class Receipt(models.Model):
 	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
 	date_issued = models.DateTimeField(auto_now_add=True)
-	
 
 class Report(models.Model):
 	description = models.CharField(max_length=500)
