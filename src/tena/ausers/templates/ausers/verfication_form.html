@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    You are verifing your account using: {{ request.session.phone_number }}
-    <form action="{% url "verify-customer" %}" method="post"> {% csrf_token %}
-      {{ form.errors }}
-      <input type="hidden" name="verification">
-      {{ form.as_ul }}
-      <button type="submit">Verify</button>
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block content %}
+  <div class="form-group">
+    <form action="{% url "verify-customer" %}" method="post">{% csrf_token %}
+      {{ form.media.js }}
+      {% for field in form %}
+        <div class="form-control" >
+          <label for="{{ field.id }}">{{ field.label }}</label>
+          {{ field }}
+        </div>
+      {% endfor %}
+      <button class="btn" type="submit">{% trans "Verify code" %}</button>
     </form>
-  </body>
-</html>
+  </div>
+
+
+{% endblock content %}
