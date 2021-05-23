@@ -27,7 +27,6 @@ from ausers.mixins import SiteRequiredMixin
 from ausers.models import Customer
 from ausers.utils import twilio_message
 
-
 class SignUpView(SiteRequiredMixin, CreateView):
     """ SignUp view to implement user registration. """
 
