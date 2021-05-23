@@ -4,10 +4,17 @@ from django.http import HttpResponseRedirect
 from django.utils.decorators import classonlymethod
 from django.views.generic import RedirectView, TemplateView, View
 
+from django.contrib.auth import get_user_model
 
 class HomePage(TemplateView):
-    template_name = "pages/index.html"
+    template_name = ""
 
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            self.template_name = "pages/customer_dashbord.html"
+        else:
+            self.template_name = "pages/index.html"
+        return super().get(request, *args, **kwargs)
 
 class MessageView(RedirectView):
     url = "/"
