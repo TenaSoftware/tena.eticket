@@ -22,6 +22,7 @@ urlpatterns = [
     re_path(r"^admin/", admin.site.urls),
     re_path(r"^chaining/", include("smart_selects.urls")),
     re_path(r"^auth/", include("ausers.urls")),
+    re_path(r"^tena/", include("core.urls")),
     re_path(r"", include("pages.urls")),
 ]
 
