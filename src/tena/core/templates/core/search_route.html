@@ -1,8 +1,21 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
-<form method="post">
-{{ form.as_p }}
-  <button type="submit" name="search">Check route</button>
-</form>
+  <div class="form-group">
+      <form action="{% url "search" %}" method="post">{% csrf_token %}
+        {{ form.media.js }}
+        {% for field in form %}
+          <div class="form-control" >
+            <label for="{{ field.id }}">{{ field.label }}</label>
+            {{ field }}
+          </div>
+        {% endfor %}
+        <button class="btn" type="submit">{% trans "Check" %}</button>
+      </form>
+    </div>
+  <form method="post">
+  {{ form.as_p }}
+    <button type="submit" name="search">Check route</button>
+  </form>
 {% endblock content %}
