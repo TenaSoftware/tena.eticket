@@ -8,11 +8,16 @@ class Branch(models.Model):
 	company = models.ForeignKey(Company, on_delete=models.CASCADE)
 	name  = models.CharField(max_length=150)
 
-
 class Driver(models.Model):
 	first_name = models.CharField(max_length=150)
 	last_name = models.CharField(max_length=150)
 	licence_level = models.CharField(max_length=150)
+
+	def __str__(self):
+		return self.get_fullname()
+
+	def get_fullname(self):
+		return f"{self.first_name} {self.last_name}"
 
 class Bus(models.Model):
 	LEVEL = (
@@ -25,12 +30,23 @@ class Bus(models.Model):
 	side_number = models.PositiveIntegerField()
 	level = models.CharField(max_length=2, choices=LEVEL)
 
+	class Meta:
+		verbose_name_plural = "Buses"
+
+	def __str__(self):
+		return f"Bus {self.side_number}"
+
+
 class Route(models.Model):
-	bus = models.ManyToManyField(Bus)	
+	bus = models.ManyToManyField(Bus)
 	start_station = models.CharField(max_length=150)
 	destination = models.CharField(max_length=150)
+	date = models.DateTimeField()
 	is_active = models.BooleanField(default=True)
 	date_create = models.DateTimeField(auto_now_add=True)
+
+	def __str__(self):
+		return f"{self.start_station} - {self.destination} [{self.date}]"
 
 class Ticket(models.Model):
 	route = models.ForeignKey(Route, on_delete=models.SET_NULL, null=True)
