@@ -156,6 +156,11 @@ footer.footer a {
     border-radius: .3em;
     outline:  none;
 }
+
+select[id^="id_date_of_birth"] {
+  width: 15vw;
+}
+
 .form-group a {
 
   text-decoration: none;
