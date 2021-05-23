@@ -15,6 +15,27 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from smart_selects.db_fields import ChainedForeignKey
 
+
+class Company(models.Model):
+    name = models.CharField(max_length=150)
+    p_o_box = models.CharField(max_length=150)
+    phone_regex = RegexValidator(
+        r"(\+2519|09)\d{8}$",
+        message="Please enter your phone number in +2519********"
+        " or 09******** format.",
+    )
+    phone_number = models.CharField(
+        _("Phone number"),
+        max_length=13,
+        validators=[phone_regex],
+        primary_key=True,
+        help_text=_("Use to verify and notify user."),
+    )
+
+class Branch(models.Model):
+	company = models.ForeignKey(Company, on_delete=models.CASCADE)
+	name  = models.CharField(max_length=150)
+
 class Region(models.Model):
     """ a model to register regions in Ethiopia. """
     name = models.CharField(_("Name"), max_length=255)
@@ -160,18 +181,24 @@ class Customer(User, Address):
         """ return customer short name as string represention."""
         return self.get_short_name()
 
-class TicketOfficer(User):
+class CompanyWorker(models.Model):
+    works_for = models.ForeignKey('Company', on_delete=models.CASCADE)
+
+    class Meta:
+        abstract = True
+
+class TicketOfficer(CompanyWorker, User):
     class Meta:
         verbose_name = "Ticket Officer"
 
-class RouteOfficer(User):
+class RouteOfficer(CompanyWorker, User):
     class Meta:
         verbose_name = "Route Officer"
 
-class RouteEmployee(User):
+class RouteEmployee(CompanyWorker, User):
     class Meta:
         verbose_name = "Route Employee"
 
-class TicketEmployee(User):
+class TicketEmployee(CompanyWorker, User):
     class Meta:
         verbose_name = "Ticket Employee"

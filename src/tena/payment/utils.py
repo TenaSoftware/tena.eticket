@@ -5,9 +5,12 @@
     DATE: May 7, 2021
 """
 
-import requests
 from collections import namedtuple
+
+import requests
 from django.conf import settings
+
+
 class YenePay:
     """ YenePay RESTAPI implementation. """
 

@@ -9,16 +9,8 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as UA
 
-from ausers.models import (
-    Customer,
-    Region,
-    RouteEmployee,
-    RouteOfficer,
-    TicketEmployee,
-    TicketOfficer,
-    Woreda,
-    Zone,
-)
+from ausers.models import (Customer, Region, RouteEmployee, RouteOfficer,
+                           TicketEmployee, TicketOfficer, Woreda, Zone, Company)
 
 
 @admin.register(Customer)
@@ -55,6 +47,7 @@ class CustomerAdmin(UA):
 admin.site.register(Region)
 admin.site.register(Zone)
 admin.site.register(Woreda)
+admin.site.register(Company)
 admin.site.register(get_user_model(), UA)
 admin.site.register(TicketOfficer, UA)
 admin.site.register(RouteOfficer, UA)
