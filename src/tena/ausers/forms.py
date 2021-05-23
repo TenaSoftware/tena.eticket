@@ -19,7 +19,7 @@ from ausers.utils import twilio_message
 
 class SignUpForm(UserCreationForm):
     """ SignUp form check validation and send verification code to customer. """
-
+    date_of_birth = forms.DateField(widget=forms.SelectDateWidget())
     class Meta:
         model = Customer
         fields = (
