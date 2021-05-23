@@ -6,15 +6,16 @@
 
 .btn {
     display: block;
+    border-radius: .5em;
     color: #fff;
     text-decoration: none;
     text-align: center;
     padding: .5em;
     width: 10em;
     margin-top: 1em;
+    margin-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
-
     background-color: #BF4C61;
 }
 
@@ -22,7 +23,7 @@
     background: #2D3E46;
 }
 
-.nav .logo>img {
+.logo img {
     width: 20vw;
     display: block;
     margin-left: auto;
@@ -34,9 +35,10 @@
 .nav ul.nav-item {
     list-style-type: none;
     display: flex;
+    border-top: .5px #fff solid;
     flex-flow: wrap;
     justify-content: center;
-    background: linear-gradient(to top, #2D3E46, #5D6B84);
+    background: #2D3E46 /*linear-gradient(to top, ,);*/
 }
 
 .nav ul.nav-item li.item {
@@ -55,7 +57,7 @@
     color: #fff;
 }
 
-.nav div.promotion {
+div.promotion {
     text-align: center;
     margin: 0 0 .5em;
     font-family: monospace;
@@ -103,8 +105,6 @@
 
 footer.footer {
     background-color: #2D3E46;
-    position: fixed;
-    bottom: 0;
     width: 100vw;
     text-align: center;
     padding: .5em;
@@ -115,4 +115,52 @@ footer.footer {
 
 footer.footer a {
     color: dodgerblue;
+}
+
+.form-group {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background:#fff;
+}
+
+
+.form-control {
+  margin-bottom: 1em;
+}
+
+.form-control label {
+    text-align: left;
+    color: #2D3E46;
+    font-weight: bold;
+    display: block;
+    margin-bottom: .5em;
+    font-size: 1em;
+    font-variant: small-caps;
+}
+
+.form-control .help-text {
+  display: flex;
+  font-weight: lighter;
+
+}
+.form-control input, .form-control select {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #707070;
+    width: 80vw;
+    align-items: center;
+    font-weight: bold;
+    padding: .5em;
+    border-radius: .3em;
+    outline:  none;
+}
+.form-group a {
+
+  text-decoration: none;
+}
+
+.login-display {
+  margin-top: 10vh;
 }
