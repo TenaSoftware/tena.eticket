@@ -20,7 +20,8 @@
         </div>
       {% endfor %}
       <button class="btn" type="submit">{% trans "Login" %}</button>
-      <a href="{% url "password_reset" %}">Forget password ?</a>
+      <a href="{% url "password_reset" %}">Forget password ?</a><br>
+      Don't have an account? <a href="{% url "signup" %}">Signup here</a>
     </form>
   </div>
 </div>
