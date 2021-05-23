@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     # Local
     "ausers.apps.AusersConfig",
     "pages",
+    "core.apps.CoreConfig",
+    "payment.apps.PaymentConfig",
 ]
 
 MIDDLEWARE = [
@@ -181,3 +183,8 @@ USE_DJANGO_JQUERY = True
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "emails"
+
+
+YENEPAY = {
+    'SANDBOX' : True
+}

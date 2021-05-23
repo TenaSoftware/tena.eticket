@@ -12,7 +12,7 @@ from pages.views import MessageView
 
 messages = {"1": "Password changened successfully."}
 urlpatterns = [
-    re_path(r"^login/", views.LoginView.as_view(), name="login"),
+    re_path(r"^login/$", views.LoginView.as_view(), name="login"),
     re_path(
         r"^password_change/done/$",
         MessageView.as_view(message=messages.get("1")),
