@@ -127,7 +127,6 @@ footer.footer a {
     background:#fff;
 }
 
-
 .form-control {
   margin-bottom: 1em;
 }
@@ -205,4 +204,54 @@ select[name^="date"] {
   border-top-right-radius: 1.2em;
   border-bottom-right-radius: 1.2em;
   align-self: flex-start;
+}
+
+.note {
+  padding: 1em;
+  font-variant: small-caps;
+}
+.note p {
+  font-weight: lighter;
+  padding: 1em;
+}
+
+@media (min-width: 930px) {
+  .logo img {
+      float: left;
+      margin-left: 3em;
+      width: 12vw;
+      padding: .5em;
+      border-radius: 1em;
+  }
+  .nav ul.nav-item {
+      margin-right: 2em;
+      justify-content: flex-end;
+
+  }
+  .nav ul.nav-item li.item {
+      display: inline;
+      margin: .15em .15em;
+      padding: .20em .25em;
+      border-radius: 1.2em;
+      font-size: 1.2em;
+  }
+  div.promotion {
+    padding: .2em;
+    font-size: 2em;
+  }
+
+  .form-group {
+      margin-top: 1em;
+      margin-bottom: 4em;\
+  }
+
+  .form-control input, .form-control select {
+      width: 50vw;
+    }
+
+  footer.footer {
+      padding: .25em;
+      font-size: 1.2vw;
+  }
+
 }
